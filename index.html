@@ -1,85 +1,43 @@
 <!DOCTYPE html>
 <html lang="ar" dir="rtl">
-
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-
-    <title>PS4 HenLoader</title>
-
-    <link rel="stylesheet" href="style.css">
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>PS4 HenLoader</title>
+  <link rel="stylesheet" href="style.css?v=12">
 </head>
-
 <body>
-
-<main class="page">
-
+  <main class="page">
     <header class="header">
-        <h1>PS4 HenLoader</h1>
-        <h2>اختر نظام جهازك</h2>
+      <div class="brand">PS4 <span>HenLoader</span></div>
+      <div class="subtitle">واجهة HEN لنظام PS4 12.52</div>
     </header>
 
-
-    <section class="menu">
-
-        <button class="menu-button" data-action="hen">
-            تشغيل HEN لنظام 12.52
-        </button>
-
-        <button class="menu-button" data-action="payload">
-            Payloads
-        </button>
-
-        <button class="menu-button" data-action="goldhen">
-            GoldHEN
-        </button>
-
-        <button class="menu-button" data-action="info">
-            معلومات النظام
-        </button>
-
-        <button class="menu-button" data-action="restore">
-            استعادة المضيف
-        </button>
-
-        <button class="menu-button" data-action="reload">
-            إعادة تحميل الصفحة
-        </button>
-
+    <section class="hero">
+      <h1>اختر نظام جهازك</h1>
+      <p>PS4 Firmware 12.52</p>
     </section>
 
-
-    <section class="status-box">
-
-        <div class="status-title">
-            <span class="status-dot"></span>
-
-            <span id="status">
-                واجهة HEN جاهزة
-            </span>
-        </div>
-
-        <p>
-            هذه واجهة ويب فقط. الأزرار لا تنفذ Jailbreak أو Payloads تلقائياً.
-        </p>
-
+    <section class="buttons">
+      <button class="menu-btn" data-action="hen">تشغيل HEN لنظام 12.52</button>
+      <button class="menu-btn" data-action="payload">Payloads</button>
+      <button class="menu-btn" data-action="goldhen">GoldHEN</button>
+      <button class="menu-btn" data-action="info">معلومات النظام</button>
+      <button class="menu-btn" data-action="restore">استعادة المضيف</button>
+      <button class="menu-btn" data-action="reload">إعادة تحميل الصفحة</button>
     </section>
 
+    <div id="status" class="status">جاهز — اختر أحد الخيارات أعلاه.</div>
 
-    <footer class="footer">
+    <p class="warning">
+      ملاحظة: هذه الواجهة لا تشغّل استغلال PS4 مباشرة. زر HEN يفتح مصدر HENloader LP الرسمي.
+    </p>
 
-        <span class="footer-icon">ⓘ</span>
-
-        <span>
-            هذه واجهة ويب فقط، الأزرار لا تنفذ Jailbreak أو Payloads تلقائياً.
-        </span>
-
+    <footer>
+      PS4 HenLoader Web UI
     </footer>
+  </main>
 
-</main>
-
-
-<script src="script.js"></script>
-
+  <script src="script.js?v=12"></script>
 </body>
 </html>

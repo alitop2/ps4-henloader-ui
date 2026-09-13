@@ -3,29 +3,57 @@
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width,initial-scale=1">
-  <title>PS4 HenLoader Web UI</title>
+  <title>PS4 HenLoader</title>
   <link rel="stylesheet" href="style.css">
 </head>
+
 <body>
-  <main class="card">
-    <div class="logo-wrap">
-      <img id="logo" src="logo.svg" alt="الشعار">
-    </div>
+
+  <div class="page">
+
     <h1>PS4 HenLoader</h1>
-    <p class="version">واجهة ويب مخصصة — PS4 12.52</p>
 
-    <div id="status" class="status">جاهز</div>
+    <h2>اختر نظام جهازك</h2>
 
-    <section class="buttons">
-      <button data-action="hen">تشغيل HEN</button>
-      <button data-action="payload">Payloads</button>
-      <button data-action="about">معلومات</button>
+    <section class="system-buttons">
+
+      <button data-action="hen">
+        تشغيل HEN لنظام 12.52
+      </button>
+
+      <button data-action="payload">
+        Payloads
+      </button>
+
+      <button data-action="about">
+        معلومات النظام
+      </button>
+
+      <button>
+        GoldHEN
+      </button>
+
+      <button>
+        استعادة المضيف
+      </button>
+
+      <button>
+        إعادة تحميل الصفحة
+      </button>
+
     </section>
 
+    <div id="status" class="status">
+      واجهة HEN جاهزة — لم يتم تنفيذ أي Payload تلقائياً.
+    </div>
+
     <p class="note">
-      هذه واجهة ويب فقط. الأزرار لا تنفذ Jailbreak أو Payloads تلقائيًا.
+      هذه واجهة ويب فقط. الأزرار لا تنفذ Jailbreak أو Payloads تلقائياً.
     </p>
-  </main>
+
+  </div>
+
   <script src="script.js"></script>
+
 </body>
 </html>

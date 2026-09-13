@@ -1,111 +1,466 @@
-*{box-sizing:border-box}
-
-html,body{
-  margin:0;
-  min-height:100%;
+* {
+    box-sizing: border-box;
 }
 
-body{
-  min-height:100vh;
-  font-family:Arial,"Noto Sans Arabic",sans-serif;
-  color:#fff;
-  background:url("background-new.png") center center/cover fixed no-repeat;
-  background-color:#06101f;
-  display:flex;
-  justify-content:center;
-  align-items:flex-start;
-  padding:35px 15px 60px;
+html,
+body {
+    margin: 0;
+    padding: 0;
+    min-height: 100%;
 }
 
-.page{
-  width:min(92vw,700px);
-  text-align:center;
-  padding:10px 0 30px;
+body {
+    min-height: 100vh;
+
+    font-family:
+        Arial,
+        "Noto Sans Arabic",
+        sans-serif;
+
+    color: #ffffff;
+
+    background:
+        url("background-new.png")
+        center center
+        / cover
+        fixed
+        no-repeat;
+
+    background-color: #06101f;
+
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+
+    overflow-x: hidden;
 }
 
-h1{
-  margin:0 0 55px;
-  font-size:32px;
-  font-weight:800;
-  text-shadow:0 3px 12px #000;
+
+/* الصفحة */
+
+.page {
+    width: 100%;
+    max-width: 900px;
+
+    min-height: 100vh;
+
+    padding: 55px 25px 70px;
+
+    text-align: center;
+
+    background: rgba(0, 15, 40, 0.20);
+
+    backdrop-filter: blur(1px);
 }
 
-h2{
-  margin:0 0 28px;
-  color:#ffe600;
-  font-size:23px;
-  text-shadow:0 2px 8px #000;
+
+/* العنوان */
+
+.header {
+    margin-bottom: 40px;
 }
 
-.system-buttons{
-  display:grid;
-  grid-template-columns:1fr 1fr;
-  gap:18px 20px;
-  max-width:650px;
-  margin:auto;
+.header h1 {
+    margin: 0 0 25px;
+
+    font-size: 42px;
+    font-weight: 800;
+
+    color: #ffffff;
+
+    text-shadow:
+        0 3px 10px rgba(0, 0, 0, 0.8);
 }
 
-button{
-  border:0;
-  border-radius:5px;
-  min-height:62px;
-  padding:10px 15px;
-  font-size:21px;
-  color:#fff;
-  background:rgba(0,82,160,.88);
-  box-shadow:0 5px 15px rgba(0,0,0,.35);
-  cursor:pointer;
-  transition:.2s;
+.header h2 {
+    margin: 0;
+
+    font-size: 27px;
+    font-weight: 700;
+
+    color: #ffe500;
+
+    text-shadow:
+        0 2px 7px rgba(0, 0, 0, 0.8);
 }
 
-button:hover{
-  background:rgba(0,120,220,.95);
-  transform:translateY(-2px);
+
+/* شبكة الأزرار */
+
+.menu {
+    display: grid;
+
+    grid-template-columns: 1fr 1fr;
+
+    gap: 20px;
+
+    width: 100%;
 }
 
-button:active{
-  transform:scale(.97);
+
+/* الأزرار الرئيسية */
+
+.menu-button {
+    min-height: 84px;
+
+    border: 1px solid rgba(80, 180, 255, 0.35);
+
+    border-radius: 9px;
+
+    background:
+        rgba(0, 105, 210, 0.78);
+
+    color: #ffffff;
+
+    font-size: 25px;
+    font-weight: 500;
+
+    cursor: pointer;
+
+    box-shadow:
+        0 5px 15px rgba(0, 0, 0, 0.25);
+
+    transition:
+        transform 0.15s ease,
+        background 0.15s ease,
+        box-shadow 0.15s ease;
 }
 
-.status{
-  margin:25px auto 0;
-  max-width:620px;
-  padding:14px;
-  border-radius:8px;
-  background:rgba(0,20,45,.65);
-  color:#8fffc0;
-  font-size:16px;
+.menu-button:hover {
+    background:
+        rgba(0, 130, 240, 0.90);
+
+    box-shadow:
+        0 0 20px rgba(0, 140, 255, 0.35);
 }
 
-.note{
-  margin:35px auto 0;
-  font-size:14px;
-  line-height:1.8;
-  color:#d7e4ff;
-  text-shadow:0 2px 5px #000;
+.menu-button:active {
+    transform: scale(0.97);
 }
 
-@media(max-width:600px){
-  body{
-    padding-top:25px;
-  }
 
-  h1{
-    font-size:27px;
-    margin-bottom:45px;
-  }
+/* صندوق الحالة */
 
-  h2{
-    font-size:21px;
-  }
+.status-box {
+    margin: 25px auto 0;
 
-  .system-buttons{
-    grid-template-columns:1fr 1fr;
-    gap:12px;
-  }
+    width: 88%;
+    max-width: 660px;
 
-  button{
-    min-height:58px;
-    font-size:17px;
-  }
+    padding: 15px 20px;
+
+    border:
+        1px solid rgba(40, 150, 255, 0.55);
+
+    border-radius: 16px;
+
+    background:
+        rgba(0, 15, 45, 0.70);
+
+    box-shadow:
+        0 0 15px rgba(0, 100, 255, 0.15);
+}
+
+.status-title {
+    display: flex;
+
+    justify-content: center;
+    align-items: center;
+
+    gap: 10px;
+
+    font-size: 20px;
+
+    color: #9cffbd;
+}
+
+.status-box p {
+    margin: 8px 0 0;
+
+    font-size: 15px;
+
+    line-height: 1.7;
+
+    color: #d5e2ff;
+}
+
+
+/* نقطة الحالة */
+
+.status-dot {
+    width: 18px;
+    height: 18px;
+
+    display: inline-block;
+
+    border-radius: 50%;
+
+    background: #00ff66;
+
+    box-shadow:
+        0 0 12px #00ff66,
+        0 0 25px rgba(0, 255, 100, 0.7);
+}
+
+
+/* الأزرار الكبيرة */
+
+.large-menu {
+    width: 100%;
+
+    margin-top: 25px;
+
+    display: flex;
+
+    flex-direction: column;
+
+    gap: 18px;
+}
+
+.large-button {
+    width: 100%;
+
+    min-height: 105px;
+
+    display: grid;
+
+    grid-template-columns: 90px 1fr 60px;
+
+    align-items: center;
+
+    padding: 0 20px;
+
+    border:
+        1px solid rgba(80, 170, 255, 0.7);
+
+    border-radius: 20px;
+
+    background:
+        linear-gradient(
+            180deg,
+            rgba(0, 105, 220, 0.86),
+            rgba(0, 40, 110, 0.88)
+        );
+
+    color: #ffffff;
+
+    font-size: 30px;
+    font-weight: 700;
+
+    cursor: pointer;
+
+    box-shadow:
+        0 5px 20px rgba(0, 0, 0, 0.35),
+        inset 0 0 20px rgba(0, 130, 255, 0.12);
+
+    transition:
+        transform 0.15s ease,
+        box-shadow 0.15s ease;
+}
+
+.large-button:hover {
+    box-shadow:
+        0 0 25px rgba(0, 140, 255, 0.45);
+}
+
+.large-button:active {
+    transform: scale(0.98);
+}
+
+
+/* زر HEN */
+
+.hen-button {
+    border-color: rgba(100, 210, 255, 0.95);
+
+    background:
+        linear-gradient(
+            180deg,
+            rgba(0, 125, 245, 0.95),
+            rgba(0, 55, 160, 0.92)
+        );
+
+    box-shadow:
+        0 0 25px rgba(0, 130, 255, 0.45),
+        inset 0 0 25px rgba(0, 160, 255, 0.15);
+}
+
+
+/* الأيقونات */
+
+.icon {
+    font-size: 45px;
+
+    text-align: center;
+}
+
+.arrow {
+    font-size: 60px;
+
+    font-weight: 300;
+
+    text-align: center;
+}
+
+
+/* الفوتر */
+
+.footer {
+    margin-top: 45px;
+
+    padding: 25px 15px;
+
+    border-top:
+        1px solid rgba(80, 170, 255, 0.35);
+
+    border-bottom:
+        1px solid rgba(80, 170, 255, 0.25);
+
+    display: flex;
+
+    justify-content: center;
+    align-items: center;
+
+    gap: 18px;
+
+    color: #b9ccf5;
+
+    font-size: 17px;
+
+    line-height: 1.8;
+}
+
+.footer-icon {
+    font-size: 27px;
+
+    color: #ffffff;
+}
+
+
+/* الجوال */
+
+@media (max-width: 650px) {
+
+    body {
+        background-attachment: scroll;
+    }
+
+    .page {
+        padding:
+            45px
+            14px
+            55px;
+    }
+
+    .header {
+        margin-bottom: 30px;
+    }
+
+    .header h1 {
+        font-size: 32px;
+
+        margin-bottom: 20px;
+    }
+
+    .header h2 {
+        font-size: 22px;
+    }
+
+    .menu {
+        gap: 12px;
+    }
+
+    .menu-button {
+        min-height: 75px;
+
+        font-size: 19px;
+    }
+
+    .status-box {
+        width: 100%;
+
+        padding: 13px 10px;
+    }
+
+    .status-title {
+        font-size: 17px;
+    }
+
+    .status-box p {
+        font-size: 13px;
+    }
+
+    .large-menu {
+        gap: 12px;
+
+        margin-top: 20px;
+    }
+
+    .large-button {
+        min-height: 92px;
+
+        grid-template-columns:
+            65px
+            1fr
+            45px;
+
+        padding: 0 10px;
+
+        border-radius: 17px;
+
+        font-size: 24px;
+    }
+
+    .icon {
+        font-size: 35px;
+    }
+
+    .arrow {
+        font-size: 50px;
+    }
+
+    .footer {
+        margin-top: 30px;
+
+        font-size: 14px;
+
+        gap: 10px;
+    }
+
+}
+
+
+/* شاشات صغيرة جداً */
+
+@media (max-width: 400px) {
+
+    .header h1 {
+        font-size: 28px;
+    }
+
+    .header h2 {
+        font-size: 20px;
+    }
+
+    .menu-button {
+        font-size: 17px;
+    }
+
+    .large-button {
+        grid-template-columns:
+            50px
+            1fr
+            35px;
+
+        font-size: 20px;
+    }
+
+    .icon {
+        font-size: 30px;
+    }
+
+    .arrow {
+        font-size: 42px;
+    }
+
 }

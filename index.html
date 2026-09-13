@@ -1,62 +1,111 @@
-<!doctype html>
+<!DOCTYPE html>
 <html lang="ar" dir="rtl">
 
 <head>
-  <meta charset="utf-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-  <title>PS4 HenLoader</title>
+    <title>PS4 HenLoader</title>
 
-  <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="style.css">
 </head>
 
 <body>
 
-  <main class="page">
+    <main class="page">
 
-    <h1>PS4 HenLoader</h1>
+        <!-- العنوان -->
+        <header class="header">
+            <h1>PS4 HenLoader</h1>
+            <h2>اختر نظام جهازك</h2>
+        </header>
 
-    <h2>اختر نظام جهازك</h2>
 
-    <section class="system-buttons">
+        <!-- الأزرار الرئيسية -->
+        <section class="menu">
 
-      <button data-action="hen">
-        تشغيل HEN 12.52
-      </button>
+            <button class="menu-button" data-action="hen">
+                تشغيل HEN لنظام 12.52
+            </button>
 
-      <button data-action="payload">
-        Payloads
-      </button>
+            <button class="menu-button" data-action="payload">
+                Payloads
+            </button>
 
-      <button data-action="about">
-        معلومات النظام
-      </button>
+            <button class="menu-button" data-action="goldhen">
+                GoldHEN
+            </button>
 
-      <button data-action="goldhen">
-        GoldHEN
-      </button>
+            <button class="menu-button" data-action="info">
+                معلومات النظام
+            </button>
 
-      <button data-action="restore">
-        استعادة المضيف
-      </button>
+            <button class="menu-button" data-action="restore">
+                استعادة المضيف
+            </button>
 
-      <button data-action="reload">
-        إعادة تحميل الصفحة
-      </button>
+            <button class="menu-button" data-action="reload">
+                إعادة تحميل الصفحة
+            </button>
 
-    </section>
+        </section>
 
-    <div id="status" class="status">
-      جاهز — لم يتم تنفيذ أي HEN أو Payload.
-    </div>
 
-    <p class="note">
-      هذه واجهة ويب فقط. الأزرار لا تنفذ Jailbreak أو Payloads تلقائياً.
-    </p>
+        <!-- حالة النظام -->
+        <section class="status-box">
 
-  </main>
+            <div class="status-title">
+                <span class="status-dot"></span>
+                <span id="status">واجهة HEN جاهزة</span>
+            </div>
 
-  <script src="script.js"></script>
+            <p>
+                هذه واجهة ويب فقط. الأزرار لا تنفذ Jailbreak أو Payloads تلقائياً.
+            </p>
+
+        </section>
+
+
+        <!-- أزرار كبيرة -->
+        <section class="large-menu">
+
+            <button class="large-button hen-button" data-action="hen">
+                <span class="icon">🎮</span>
+                <span>تشغيل HEN</span>
+                <span class="arrow">›</span>
+            </button>
+
+            <button class="large-button" data-action="payload">
+                <span class="icon">📦</span>
+                <span>Payloads</span>
+                <span class="arrow">›</span>
+            </button>
+
+            <button class="large-button" data-action="info">
+                <span class="icon">ⓘ</span>
+                <span>معلومات</span>
+                <span class="arrow">›</span>
+            </button>
+
+        </section>
+
+
+        <!-- الملاحظة -->
+        <footer class="footer">
+
+            <span class="footer-icon">ⓘ</span>
+
+            <span>
+                هذه واجهة ويب فقط، الأزرار لا تنفذ Jailbreak أو Payloads تلقائياً.
+            </span>
+
+        </footer>
+
+    </main>
+
+
+    <script src="script.js"></script>
 
 </body>
+
 </html>

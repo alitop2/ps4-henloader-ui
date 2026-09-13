@@ -9,7 +9,7 @@ body{
   min-height:100vh;
   font-family:Arial,"Noto Sans Arabic",sans-serif;
   color:#fff;
-  background:url("background.png") center center/cover fixed no-repeat;
+  background:url("background-new.png") center center/cover fixed no-repeat;
   background-color:#06101f;
   display:flex;
   justify-content:center;
